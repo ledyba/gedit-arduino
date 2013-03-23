@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<language id="ino" _name="Arduino" version="2.0" _section="Sources">
+	<metadata>
+		<property name="mimetypes">text/x-c;text/x-csrc;image/x-xpixmap</property>
+		<property name="globs">*.pde;*.ino</property>
+		<property name="line-comment-start">//</property>
+		<property name="block-comment-start">/*</property>
+		<property name="block-comment-end">*/</property>
+	</metadata>
+	
+	<styles>
+		<style id="keyword" _name="Keyword" map-to="c:keyword"/>
+		<style id="type" _name="Data Type" map-to="c:type"/>
+		<style id="common-defines" _name="Common Defines" map-to="c:common-defines"/>
+	</styles>
+
+	<definitions>
+		<!-- actual language definition: C++-specific stuff plus everything from C -->
+		<context id="ino">
+			<include>
+				<context ref="cpp:cpp"/>
+				<context ref="c:c"/>
+			</include>
+		</context>
+	</definitions>
+</language>
